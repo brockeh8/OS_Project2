@@ -7,4 +7,11 @@ public class ProcessSimulator {
     try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
       String line;
       while ((line = br,readLine()) != null) {
+        String[] parts = line.split(",");
+        int pid   = Integer.parseInt(parts[0].trim());
+        int burst = Integer.parseInt(parts[1].trim());
+        threads.add(new ProcessThread(pid, burst));
+            
       }
+    }
+    
