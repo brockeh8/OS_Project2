@@ -1,7 +1,7 @@
 import java.util.concurrent.Semaphore;
 
 public class DiningManager {
-  public static void run(NumPhilosophers, meals) throws InterruptedException {
+  public static void run(int NumPhilosophers, int meals) throws InterruptedException {
     Semaphore[] forks = new Semaphore[numPhilosophers];
     for (int i = 0; i < numPhilosophers; i++) {
       forks[i] = new Semaphore;
