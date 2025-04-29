@@ -9,7 +9,7 @@ public class DiningManager {
 
     Thread[] threads = new Thread[numPhilosophers];
     for (int i = 0; i < numPhilosophers; i++) {
-      threads[i] = new Thread(new Philosopher(i + 1, forks, meals);
+      threads[i] = new Thread(new Philosopher(i + 1, forks, meals));
       threads[i].start();
     }
 
