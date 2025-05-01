@@ -13,5 +13,8 @@ public class ProcessSimulator {
         threads.add(new ProcessThread(pid, burst));
             
       }
+      for (ProcessThread t : threads) t.start();
+      for (ProcessThread t : threads) t.join();
+      System.out.println("All processes complete.\n");
     }
-    
+}
